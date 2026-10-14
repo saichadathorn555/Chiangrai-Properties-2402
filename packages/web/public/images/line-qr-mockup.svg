@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="LINE QR mockup — not scannable">
+  <rect width="120" height="120" fill="#FBF8F4"/>
+  <g fill="none" stroke="#B89270" stroke-width="4">
+    <path d="M12 12h28v28H12zM80 12h28v28H80zM12 80h28v28H12z"/>
+  </g>
+  <g fill="#B89270">
+    <path d="M20 20h12v12H20zM88 20h12v12H88zM20 88h12v12H20zM48 12h8v8h-8zM60 16h8v12h-8zM48 28h8v12h-8zM64 36h8v8h-8zM12 48h12v8H12zM28 52h12v12H28zM16 64h8v8h-8zM80 48h8v12h-8zM96 48h12v8H96zM92 64h8v8h-8zM104 60h4v16h-4zM48 80h8v12h-8zM60 88h12v8H60zM48 100h8v8h-8zM68 100h8v8h-8zM80 80h8v8h-8zM92 80h16v8H92zM80 92h8v16h-8zM96 96h12v12H96z"/>
+  </g>
+  <rect x="44" y="45" width="32" height="29" rx="5" fill="#B89270"/>
+  <text x="60" y="63" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="bold" fill="#FBF8F4">LINE</text>
+  <path d="m55 73 1 5 9-5" fill="#B89270"/>
+</svg>

@@ -1,0 +1,2 @@
+export const INQUIRY_SUCCESS = "Thank you for reaching out! We have received your request and will get back to you shortly.";
+export const INQUIRY_ERROR = "We couldn't forward your request. Please try again, or email contact@chiangrai-properties.com.";
