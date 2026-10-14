@@ -178,3 +178,20 @@
 - Same-origin absolute redirect to /?subscribed=1 displays exact confirmation “Thank you for subscribing!” after provider success redirect. Query flag is display state, not verified proof of delivery.
 - New public submissions no longer call newsletter.subscribe and therefore are not saved in the site's database. Existing stored subscribers and backend files remain preserved; FormSubmit backend is unused by this page.
 - Native POST payload, required email/consent and successful redirect tested with intercepted Web3Forms response; no live Web3Forms email delivery tested. No overflow in confirmation state at desktop/mobile sizes. Lint/typecheck/build passed.
+
+## Deployment boot fix — @react-pdf/renderer standard fonts (2026-10-14)
+- Cause: bundled server.js inlined @react-pdf/renderer + PDFKit. react-pdf's FontStore loads the PDFKit
+  standard fonts on import; PDFKit resolves package-private `#standard-fonts/*` via
+  `createRequire(import.meta.url)`, which in the bundle points at /app/src/server.js → unhandled
+  rejection right after listen → machine exits (health check fails).
+- Fix: `shared/brochure.tsx` uses `@react-pdf/primitives` (string tags) + type-only renderer imports and
+  exports `configureBrochureFonts()`. `api/lib/publish-brochure.tsx` loads `@react-pdf/renderer` and
+  `sharp` from node_modules at publish time via a non-literal dynamic import, so they keep their own
+  package scope. `sharp` moved to dependencies.
+- Asset path fix: brochure fonts/logo resolved from first dir containing all assets
+  (dev `packages/web/public`, prod `dist/` beside `src/server.js`, cwd fallbacks) instead of the
+  dev-only `../../../public` (which became `/public` in production).
+- Verified with Bun 1.3.14 in simulated prod layout (/app/src/server.js + /app/dist, hoisted
+  production install): server stays up, `/` 200; bundled brochure render → 4-page PDF with Thai font
+  and logo; dev source render OK; in-browser brochure OK; lint/typecheck/build pass.
+- Not verified: an actual Fly deploy (re-publish needed).

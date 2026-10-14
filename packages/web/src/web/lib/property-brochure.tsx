@@ -1,9 +1,15 @@
 import { Font, pdf } from "@react-pdf/renderer";
 import type { Listing } from "../queries/listings";
-import { Brochure, validateBrochure } from "../../shared/brochure";
+import {
+  Brochure,
+  configureBrochureFonts,
+  validateBrochure,
+} from "../../shared/brochure";
 
-Font.register({ family: "BrochureBody", src: "/fonts/NotoSansThai.ttf" });
-Font.register({ family: "BrochureDisplay", src: "/fonts/CormorantGaramond.ttf" });
+configureBrochureFonts(Font, {
+  body: "/fonts/NotoSansThai.ttf",
+  display: "/fonts/CormorantGaramond.ttf",
+});
 async function pdfImage(url: string): Promise<string> {
   const response = await fetch(url);
   if (!response.ok) throw new Error("Image unavailable");

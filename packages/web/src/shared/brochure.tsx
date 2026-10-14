@@ -1,19 +1,33 @@
-import {
-  Document,
-  Page,
-  View,
-  Text,
-  Image,
-  Font,
-  StyleSheet,
-} from "@react-pdf/renderer";
+// Primitives only: react-pdf elements are plain string tags, so the shared
+// component never pulls the renderer (fontkit/PDFKit) into the server bundle.
+// Each caller loads the renderer itself and calls configureBrochureFonts().
+import * as primitives from "@react-pdf/primitives";
+import type * as ReactPdf from "@react-pdf/renderer";
 import type { Listing } from "../web/queries/listings";
 import {
   propertyInformation,
   propertyPrice,
 } from "../web/lib/property-summary";
 
-Font.registerHyphenationCallback((word) => [word]);
+const Document = primitives.Document as unknown as typeof ReactPdf.Document;
+const Page = primitives.Page as unknown as typeof ReactPdf.Page;
+const View = primitives.View as unknown as typeof ReactPdf.View;
+const Text = primitives.Text as unknown as typeof ReactPdf.Text;
+const Image = primitives.Image as unknown as typeof ReactPdf.Image;
+const StyleSheet: Pick<typeof ReactPdf.StyleSheet, "create"> = {
+  create: (styles) => styles,
+};
+
+/** Registers the brochure font families on the renderer instance in use. */
+export function configureBrochureFonts(
+  font: typeof ReactPdf.Font,
+  src: { body: string; display: string },
+) {
+  font.registerHyphenationCallback((word) => [word]);
+  font.register({ family: "BrochureBody", src: src.body });
+  font.register({ family: "BrochureDisplay", src: src.display });
+}
+
 const s = StyleSheet.create({
   page: {
     height: 841.89,
