@@ -8,16 +8,15 @@ export default function AboutPage() {
   return (
     <>
       <section id="story" className="wrap pt-14">
-        <div className="grid gap-12 md:grid-cols-12">
-          <div className="reveal d2 text-center md:col-span-5 md:pt-10">
+        <h1 className="reveal d1 text-[40px] font-medium tracking-[0.12em] text-[#C3A38A] md:text-[56px]">ABOUT US</h1>
+        <div className="mt-10 grid gap-12 border-t border-line pt-10 md:grid-cols-12">
+          <div className="reveal d2 text-center md:col-span-5">
             <FounderPortrait alt={t.about.founderName} className="mx-auto w-[54%]" />
-            <p className="mt-6 font-serif text-[28px]">{t.about.founderName}</p>
-            <p className="eyebrow mt-2 text-stone">{t.about.founderRole}</p>
+            <p className="mt-6 font-serif text-[28px] text-[#77230D]">{t.about.founderName}</p>
+            <p className="eyebrow mt-2 font-bold text-stone">{t.about.founderRole}</p>
           </div>
-          <div className="md:col-span-6 md:col-start-7 md:pt-10">
-            <p className="eyebrow reveal d2 text-clay">{s.eyebrow}</p>
-            <h1 className="display translated-heading reveal d2 mt-4 max-w-[22ch] text-balance [--heading-size:28px] md:[--heading-size:34px] lg:[--heading-size:42px]">{s.heading}</h1>
-            <div className="reveal d3 mt-8 border-t border-line pt-8">
+          <div className="md:col-span-6 md:col-start-7">
+            <div className="reveal d3">
               <div className="space-y-7 text-[17px] leading-[1.85] text-ink/80">
                 {s.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph.startsWith(s.bold) ? <><strong className="font-semibold text-ink">{s.bold}</strong>{paragraph.slice(s.bold.length)}</> : paragraph}</p>)}
               </div>

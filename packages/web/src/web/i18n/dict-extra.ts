@@ -82,16 +82,13 @@ export const extraEn = {
     submit: "Send",
   },
   story: {
-    eyebrow: "About Us",
     title: "My story",
-    heading: "Bringing Global Agency Standards to Northern Thailand",
     lead: "A personal approach to property in Chiang Rai.",
     bold: "Chiangrai Properties was founded to set a new benchmark for real estate in Northern Thailand",
     paragraphs: [
       "After nearly two decades leading commercial real estate portfolios and advising global corporate clients at top international firms in Bangkok, I relocated to Northern Thailand seeking a more intentional lifestyle surrounded by nature.",
       "However, transitioning to Chiang Rai revealed a distinct gap in the local market: a genuine need for structured, institutional-grade real estate advisory, true transparency, and the standardized systems that property owners and international clients rely on.",
       "Chiangrai Properties was founded to set a new benchmark for real estate in Northern Thailand by establishing a true, international-standard system. We are building a modernized real estate ecosystem that blends global agency discipline with genuine Northern hospitality—creating a centralized platform where integrity, transparency, and operational excellence come first.",
-      "By bringing institutional Standard Operating Procedures to Northern Thailand, we provide a professional, reliable hub for property owners, local co-agents, and foreign buyers alike.",
       "Whether you are a landlord wanting professional representation, a co-agent seeking a reliable network, or an expat navigating Northern Thailand’s property landscape, Chiangrai Properties provides the back-of-house structure to make every transaction clean, efficient, and completely transparent.",
     ],
     quote: "We don't just post properties. We build trust, standardize the journey, and deliver global agency standards with authentic local care.",
@@ -182,16 +179,13 @@ export const extraTh: Extra = {
     submit: "ส่ง",
   },
   story: {
-    eyebrow: "เกี่ยวกับเรา",
     title: "เรื่องราวของฉัน",
-    heading: "ยกระดับมาตรฐานเอเจนซี่ระดับสากลสู่ภาคเหนือของไทย",
     lead: "อสังหาฯ ในเชียงราย ด้วยความใส่ใจเป็นรายบุคคล",
     bold: "Chiangrai Properties ก่อตั้งขึ้นเพื่อสร้างมาตรฐานใหม่ให้กับวงการอสังหาริมทรัพย์ในภาคเหนือของไทย",
     paragraphs: [
       "หลังจากใช้เวลาเกือบสองทศวรรษบริหารพอร์ตอสังหาริมทรัพย์เชิงพาณิชย์ และให้คำปรึกษาแก่ลูกค้าองค์กรระดับโลกในบริษัทชั้นนำระดับนานาชาติในกรุงเทพฯ ฉันย้ายมาอยู่ภาคเหนือของไทยเพื่อแสวงหาวิถีชีวิตที่ตั้งใจมากขึ้น ท่ามกลางธรรมชาติ",
       "อย่างไรก็ตาม การย้ายมาเชียงรายทำให้เห็นช่องว่างที่ชัดเจนในตลาดท้องถิ่น นั่นคือความต้องการที่แท้จริงสำหรับบริการที่ปรึกษาอสังหาริมทรัพย์ที่มีโครงสร้างชัดเจนและได้มาตรฐานระดับสถาบัน ความโปร่งใสอย่างแท้จริง และระบบที่เป็นมาตรฐานซึ่งเจ้าของอสังหาฯ และลูกค้าต่างชาติวางใจได้",
       "Chiangrai Properties ก่อตั้งขึ้นเพื่อสร้างมาตรฐานใหม่ให้กับวงการอสังหาริมทรัพย์ในภาคเหนือของไทย ด้วยระบบที่ได้มาตรฐานสากลอย่างแท้จริง เรากำลังสร้างระบบนิเวศอสังหาริมทรัพย์ที่ทันสมัย ผสานวินัยของเอเจนซี่ระดับโลกเข้ากับการต้อนรับอันอบอุ่นแบบชาวเหนือ เป็นแพลตฟอร์มศูนย์กลางที่ให้ความสำคัญกับความซื่อตรง ความโปร่งใส และความเป็นเลิศในการดำเนินงานเป็นอันดับแรก",
-      "ด้วยการนำขั้นตอนการปฏิบัติงานมาตรฐาน (SOP) ระดับสถาบันมาสู่ภาคเหนือของไทย เราจึงเป็นศูนย์กลางที่เป็นมืออาชีพและเชื่อถือได้ สำหรับทั้งเจ้าของอสังหาฯ Co-agent ในท้องถิ่น และผู้ซื้อชาวต่างชาติ",
       "ไม่ว่าคุณจะเป็นเจ้าของอสังหาฯ ที่ต้องการตัวแทนมืออาชีพ Co-agent ที่มองหาเครือข่ายที่เชื่อถือได้ หรือชาวต่างชาติที่กำลังศึกษาตลาดอสังหาริมทรัพย์ในภาคเหนือของไทย Chiangrai Properties มีโครงสร้างการทำงานเบื้องหลังที่ทำให้ทุกธุรกรรมเป็นระเบียบ มีประสิทธิภาพ และโปร่งใสอย่างสมบูรณ์",
     ],
     quote: "เราไม่ได้แค่ลงประกาศอสังหาฯ แต่เราสร้างความไว้วางใจ วางมาตรฐานให้ทุกขั้นตอน และส่งมอบมาตรฐานเอเจนซี่ระดับสากลด้วยความใส่ใจแบบท้องถิ่นอย่างแท้จริง",
