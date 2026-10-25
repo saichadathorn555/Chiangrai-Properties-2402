@@ -5,7 +5,6 @@ import { useT } from "../i18n/context";
 export default function AboutPage() {
   const { t } = useT();
   const s = t.story;
-  const foundingPhrase = "Chiangrai Properties was established to bridge that gap";
   return (
     <>
       <section id="story" className="wrap pt-14">
@@ -16,14 +15,15 @@ export default function AboutPage() {
             <p className="eyebrow mt-2 text-stone">{t.about.founderRole}</p>
           </div>
           <div className="md:col-span-6 md:col-start-7 md:pt-10">
-            <h1 className="display translated-heading reveal d2 [--heading-size:28.8px] md:[--heading-size:36.8px] lg:[--heading-size:48px]">{s.title}</h1>
-            <div className="reveal d3 mt-7 border-t border-line pt-7">
-              <div className="space-y-6 text-[17px] leading-relaxed text-ink/80">
-                {s.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph.startsWith(foundingPhrase) ? <><strong className="font-bold">{foundingPhrase}</strong>{paragraph.slice(foundingPhrase.length)}</> : paragraph}</p>)}
+            <p className="eyebrow reveal d2 text-clay">{s.eyebrow}</p>
+            <h1 className="display translated-heading reveal d2 mt-4 max-w-[22ch] text-balance [--heading-size:28px] md:[--heading-size:34px] lg:[--heading-size:42px]">{s.heading}</h1>
+            <div className="reveal d3 mt-8 border-t border-line pt-8">
+              <div className="space-y-7 text-[17px] leading-[1.85] text-ink/80">
+                {s.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph.startsWith(s.bold) ? <><strong className="font-semibold text-ink">{s.bold}</strong>{paragraph.slice(s.bold.length)}</> : paragraph}</p>)}
               </div>
             </div>
-            <blockquote className="reveal d4 mt-10 border-l-2 border-peach pl-6 font-serif text-[24px] italic leading-snug">
-              “{t.home.founderQuote}”
+            <blockquote className="reveal d4 mt-12 border-l-2 border-peach pl-6 font-serif text-[22px] italic leading-[1.5] text-ink md:text-[24px]">
+              “{s.quote}”
             </blockquote>
           </div>
         </div>
