@@ -31,7 +31,7 @@ function LangToggle({ className = "" }: { className?: string }) {
 function Wordmark() {
   return (
     <Link to="/" className="group flex flex-col items-start leading-none" aria-label="Chiang Rai Properties — Home">
-      <img src="/images/official-badge-burnt-terracotta.png" alt="Chiangrai Properties" width={668} height={668} className="size-[116px] object-contain md:size-[140px]" />
+      <img src="/images/logo-chiangrai-terracotta.png" alt="Chiangrai Properties" width={668} height={668} className="size-[116px] object-contain md:size-[140px]" />
     </Link>
   );
 }

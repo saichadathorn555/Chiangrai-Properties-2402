@@ -23,7 +23,7 @@ async function pdfImage(url: string): Promise<string> {
 }
 export async function generatePropertyBrochure(l: Listing, sample = false) {
   validateBrochure(l);
-  const logo = await pdfImage("/images/official-badge.png");
+  const logo = await pdfImage("/images/logo-chiangrai-gold.png");
   const photos = await Promise.all(l.imageUrls.slice(0, 12).map((url) => pdfImage(url).catch(() => null)));
   const plan = l.floorPlanUrl ? await pdfImage(l.floorPlanUrl).catch(() => null) : null;
   const blob = await pdf(<Brochure l={l} media={{ logo, photos, plan }} sample={sample} />).toBlob();

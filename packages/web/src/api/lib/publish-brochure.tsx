@@ -50,7 +50,7 @@ async function loadSharp() {
 const REQUIRED_ASSETS = [
   "fonts/NotoSansThai.ttf",
   "fonts/CormorantGaramond.ttf",
-  "images/official-badge.png",
+  "images/logo-chiangrai-gold.png",
 ];
 let cachedAssetRoot: string | null = null;
 function assetRoot() {
@@ -113,7 +113,7 @@ export type BrochureInput = BrochureListing & {
 export async function renderBrochurePdf(l: BrochureInput) {
   validateBrochure(l);
   const { renderToBuffer } = await loadRenderer();
-  const logo = await image("/images/official-badge.png");
+  const logo = await image("/images/logo-chiangrai-gold.png");
   // Fail publication on broken supplied media, rather than publish a partial PDF.
   const photos: string[] = [];
   for (let start = 0; start < l.images.length; start += 4) {

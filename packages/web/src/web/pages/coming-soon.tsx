@@ -3,7 +3,7 @@ import { ArrowRight, Check, Loader2 } from "lucide-react";
 
 function BrandMark() {
   return (
-    <img src="/images/official-badge.png" alt="Chiangrai Properties" className="launch-logo border-0! object-contain" />
+    <img src="/images/logo-chiangrai-gold.png" alt="Chiangrai Properties" className="launch-logo border-0! object-contain" />
   );
 }
 
